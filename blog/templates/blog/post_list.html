@@ -1,4 +1,4 @@
-<<html>
+<html>
     <head>
         <title>Marina's Girls blog</title>
     </head>
@@ -6,17 +6,16 @@
         <div>
             <h1><a href="">Marina's blog</a></h1>
         </div>
-
         <div>
-            <p>published: 27.06.2016, 13:40</p>
-            <h2><a href="">My first blog</a></h2>
-            <p>EOSDA analitics.</p>
-        </div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+    {% for post in posts %}
+      <div>
+        <p>{{post.published_date}}</p>
+        <h1><a href="/">{{post.title}}</a></h1>
+        <p>{{post.author}}</p>
+        <p>{{post.text}}</p>
+      </div>
+    {%endfor%}
+</div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>My blog.</p>
-        </div>
-    </body>
 </html>
